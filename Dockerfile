@@ -8,9 +8,6 @@ WORKDIR /app
 # Add source code
 ADD . /app/
 
-#Expose port
-EXPOSE 80
-
 # Build the source
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main app.go
 
