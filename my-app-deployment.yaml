@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app-deployment
+  labels:
+    app: my-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app
+  template: #this here is the blueprint of a pod
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers: #container inside a pod
+        - name: my-app
+          image: prakash1001/my-app
+          ports:
+            - name: my-app-port
+              containerPort: 80
