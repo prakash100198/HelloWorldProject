@@ -4,5 +4,5 @@ RUN mkdir /app
 ADD . ./app
 WORKDIR /app
 COPY . ./
-RUN go build -o main .
+RUN GOOS=linux go build -o main .
 CMD ["./main"]
