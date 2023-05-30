@@ -24,4 +24,4 @@ WORKDIR /root
 COPY --from=builder /app/. .
 
 # Run the binary
-CMD ["./main"]
+CMD ["./app"]
