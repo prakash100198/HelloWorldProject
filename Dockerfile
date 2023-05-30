@@ -5,4 +5,4 @@ ADD . ./app
 WORKDIR /app
 COPY . ./
 RUN go build -o main .
-CMD ["/app/main"]
+CMD ["./main"]
