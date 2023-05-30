@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app-deployment
+  labels:
+    app: my-app
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: my-app
+  template: #this here is the blueprint of a pod
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers: #container inside a pod
+        - name: my-app
+          image: {{ .Values.image.repository }}
+          ports:
+            - name: {{ .Values.service.portName }}
+              containerPort: {{ .Values.service.targetPort }}
