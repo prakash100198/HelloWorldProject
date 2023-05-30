@@ -19,4 +19,4 @@ spec:
           image: prakash1001/my-app
           ports:
             - name: my-app-port
-              containerPort: 80
+              containerPort: 3000

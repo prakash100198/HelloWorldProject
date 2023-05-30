@@ -8,7 +8,7 @@ spec:
   ports:
     - name: my-app-port
       port: 8080
-      targetPort: 80
+      targetPort: 3000
     # - name: postgres-port
     #   port: 8090
     #   targetPort: 5432
